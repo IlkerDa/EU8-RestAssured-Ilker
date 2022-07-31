@@ -1,5 +1,6 @@
 package com.cybertek.day3;
 
+import com.cybertek.utilities.SpartanTestBase;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.BeforeAll;
@@ -11,11 +12,8 @@ import java.util.List;
 import static io.restassured.RestAssured.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class SpartanTestsWithPath {
-    @BeforeAll
-    public static void init(){
-        baseURI = "http://44.204.228.18:8000";
-    }
+public class SpartanTestsWithPath extends SpartanTestBase {
+
 
 
 
