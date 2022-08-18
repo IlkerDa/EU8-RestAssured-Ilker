@@ -66,7 +66,19 @@ public class HamcrestMatchersApiTest {
                 .body("teachers[0].gender", equalToIgnoringCase("male"));
     }
 
-
+@DisplayName("GET request to teacher/all and chaining")
+    @Test
+//verify "Karmen","Leena","Eliza inside the all teachers
+    public void teachersTest(){
+        given()
+                .accept(ContentType.JSON).
+        when()
+                .get("http://api.cybertektraining.com/teacher/all").
+        then()
+                .statusCode(200)
+                .and()
+                .body("teachers.firstName", hasItems("Karmen","Leena","Eliza"));
+}
 
 
 
