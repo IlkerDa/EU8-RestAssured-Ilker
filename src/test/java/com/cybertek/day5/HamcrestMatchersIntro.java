@@ -20,7 +20,7 @@ public class HamcrestMatchersIntro {
         assertThat(5+5,equalTo(10));
         //matchers has 2 overloaded version
         //first that accept actual value
-        //second taht accept another matchers
+        //second that accept another matchers
         //below examples is method is accepting another matchers equal to make it readable
         assertThat(5+5,is(equalTo(10)));
 
@@ -34,6 +34,7 @@ public class HamcrestMatchersIntro {
         //lessThan()
         //lessThanOrEqualTo()
         assertThat(5+5,is(greaterThan(9)));
+
     }
 
     @DisplayName("Assertion with String")
@@ -42,7 +43,7 @@ public class HamcrestMatchersIntro {
 
         String text = "B22 is learning Hamcrest";
 
-        //checking for euqality is same as numbers
+        //checking for equality is same as numbers
         assertThat(text,is("B22 is learning Hamcrest"));
         assertThat(text,equalTo("B22 is learning Hamcrest"));
         assertThat(text,is(equalTo("B22 is learning Hamcrest")));
